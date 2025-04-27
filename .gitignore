@@ -1,2 +1,4 @@
 goalie_stats.json
 utils/__pycache__/*
+.env
+venv/*
