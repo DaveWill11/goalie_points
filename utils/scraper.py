@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import datetime
+from utils.logger import log_and_print
 
 def fetch_goalie_stats():
     DATE = datetime.datetime.now()
@@ -12,7 +13,7 @@ def fetch_goalie_stats():
     table = soup.find("table", {"id": "stats"})
 
     if not table:
-        print("Goalie stats not found")
+        log_and_print("Goalie stats not found", "warning")
         return []
     
     stats = []

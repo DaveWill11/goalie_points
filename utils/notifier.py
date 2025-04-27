@@ -1,6 +1,7 @@
 import os
 import requests
 from dotenv import load_dotenv
+from utils.logger import log_and_print
 
 load_dotenv()
 
@@ -22,4 +23,4 @@ def send_notification(title, message):
     response = requests.post("https://api.pushover.net/1/messages.json", data=data)
 
     if response.status_code != 200:
-        print(f"Failed to send notification: {response.text}")
+        log_and_print(f"Failed to send notification: {response.text}", "error")

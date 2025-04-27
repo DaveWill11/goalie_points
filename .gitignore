@@ -1,4 +1,10 @@
+#Ignore generated goalie stats and log
 goalie_stats.json
+goalie_tracker.log
+
+#Ignore Python cache files
 utils/__pycache__/*
+
+#Ignore environment files   
 .env
-venv/*
+venv/
