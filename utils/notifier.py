@@ -5,16 +5,16 @@ from utils.logger import log_and_print
 
 load_dotenv()
 
-PUSHOVER_APP_TOKEN = os.getenv('PUSHOVER_APP_TOKEN')
+PUSHOVER_API_TOKEN = os.getenv('PUSHOVER_API_TOKEN')
 PUSHOVER_USER_KEY = os.getenv('PUSHOVER_USER_KEY')
 
 def send_notification(title, message):
-    if not PUSHOVER_APP_TOKEN or not PUSHOVER_USER_KEY:
+    if not PUSHOVER_API_TOKEN or not PUSHOVER_USER_KEY:
         log_and_print("Missing Pushover credentials! Notification not sent.", "error")
         return
     
     data = {
-        "token": PUSHOVER_APP_TOKEN,
+        "token": PUSHOVER_API_TOKEN,
         "user": PUSHOVER_USER_KEY,
         "title": title,
         "message": message
