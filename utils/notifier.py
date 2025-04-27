@@ -10,7 +10,7 @@ PUSHOVER_USER_KEY = os.getenv('PUSHOVER_USER_KEY')
 
 def send_notification(title, message):
     if not PUSHOVER_APP_TOKEN or not PUSHOVER_USER_KEY:
-        print("Missing Pushover credentials! Notification not sent.")
+        log_and_print("Missing Pushover credentials! Notification not sent.", "error")
         return
     
     data = {
