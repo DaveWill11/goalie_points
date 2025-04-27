@@ -21,7 +21,7 @@ If a change is detected (such as a goalie scoring a goal or getting an assist), 
 
 ```bash
 git clone https://github.com/DaveWill11/goalie_points.git
-cd goalie-tracker
+cd goalie_points
 ```
 
 #### **2. Set Up a Virtual Environment**
