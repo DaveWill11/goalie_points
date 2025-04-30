@@ -8,6 +8,7 @@ def fetch_goalie_stats():
     CUR_YEAR = DATE.strftime("%Y")
     url = f'https://hockey-reference.com/playoffs/NHL_{CUR_YEAR}_goalies.html'
     response = requests.get(url)
+    response.encoding = "utf-8"
     soup = BeautifulSoup(response.text, "html.parser")
 
     table = soup.find("table", {"id": "stats"})
